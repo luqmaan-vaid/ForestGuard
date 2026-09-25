@@ -5,8 +5,8 @@ Option Infer Off
 
 Public Class ForestManager
 
-        Private _forests() As Forest
-        Private _forestCount As Integer
+    Private _forests() As Forest
+    Private _forestCount As Integer
 
         Public Sub New()
 

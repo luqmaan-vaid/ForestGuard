@@ -73,6 +73,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forest.vb" />
+    <Compile Include="ForestManager.vb" />
+    <Compile Include="ForestUtility.vb" />
+    <Compile Include="Harvestrecord.vb" />
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +106,9 @@
     </Compile>
     <Compile Include="My Project\TemperateForest.vb" />
     <Compile Include="My Project\Tree.vb" />
+    <Compile Include="RainForest.vb" />
+    <Compile Include="TemperateForest.vb" />
+    <Compile Include="Tree.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

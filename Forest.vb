@@ -98,7 +98,7 @@ Public MustInherit Class Forest
 
                 ' Calculate the maximum amount that can be harvested:
                 Dim maximumHarvest As Integer =
-                CInt(_trees(i).TreeCount * ForestUtility.MAX_HARVEST_PERCENTAGE)
+                 ForestUtility.CalculateMaximumHarvest(_trees(i).TreeCount)
 
                 ' Check whether the requested amount is allowed:
                 If amount > maximumHarvest Then
@@ -162,10 +162,17 @@ Public MustInherit Class Forest
     End Property
 
     ' Age property:
-    Public ReadOnly Property Age As Integer
+    Public Property Age As Integer
+
         Get
             Return _age
         End Get
+        Set(value As Integer)
+            If ForestUtility.IsNegative(value) Then
+                _age = value
+            End If
+
+        End Set
     End Property
 
     ' Status property:

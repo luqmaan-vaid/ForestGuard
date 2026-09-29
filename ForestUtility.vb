@@ -1,6 +1,6 @@
 ﻿Option Strict On
 Option Explicit On
-Option Infer On
+Option Infer Off
 
 Public NotInheritable Class ForestUtility
     Public Const FINE_PER_TREE As Double = 500.0
@@ -29,6 +29,12 @@ Public NotInheritable Class ForestUtility
             Return 0
         End If
         Return totalTrees / landSize
+    End Function
+
+    Public Shared Function CalculateMaximumHarvest(treeCount As Integer) As Integer
+
+        Return CInt(treeCount * MAX_HARVEST_PERCENTAGE)
+
     End Function
 
     Public Shared Function IsNegative(value As Double) As Boolean

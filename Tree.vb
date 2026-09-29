@@ -1,6 +1,6 @@
 ﻿Option Strict On
 Option Explicit On
-Option Infer On
+Option Infer Off
 
 Public Class Tree
     Private _treeType As String
